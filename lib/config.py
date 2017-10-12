@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 '''
 @summary: 配置加载模块
-@author: kevenchen
+@author: yongze.chen
 '''
 import os,re,json
 import lib.file

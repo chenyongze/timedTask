@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 '''
 @summary: 配置解析模块
-@author: kevenchen
+@author: yongze.chen
 '''
 import ConfigParser
 import os
