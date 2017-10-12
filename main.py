@@ -6,13 +6,14 @@ import lib.config_
 import lib.crontab
 import lib.file
 import lib.log
-from _random import Random
 
+from _random import Random
+# start run
 app_name = "timedTask"
 pid_file = lib.config_.BasePath_Cache+'/pid'
 
 def get_job_status(cron_name):
-    job_file  = lib.config_.BasePath_Cache+'/job/'+cron_name
+    job_file  = lib.config_.BasePath_Cache+'/job/'+cron_name+'.log'
     job_file_content = lib.file.read(job_file, 'line')
     job_status = {"pid":0,"locked":False,"lasttime":0,"fail_begin":0,"fail_count":0}
     if job_file_content.strip()!='':
@@ -82,7 +83,9 @@ def get_job_setting():
             "alarm_fail_range":0,
             "alarm_adminlist":"",
             "alarm_notice_mode":"",
-            "alarm_message":""}
+            "alarm_message":""
+    }
+
     try:
         content = lib.file.read(lib.config_.BasePath+'/setting.json')
         content=re.sub(r'\/\*.*\*\/','',content)
