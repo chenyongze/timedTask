@@ -46,3 +46,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.pyc
+cache/job/*
+cache/log/*
+cache/pid
