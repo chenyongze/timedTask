@@ -1,0 +1,17 @@
+{
+	"sync_test1":{
+		"cron_time"	: "* * * * * *",
+		"timeout"	: "2",
+		"params"	: {"begin":"0","end":"999"},
+		"alarm_fail_total" 	: "4",//任务失败累计1次 
+		"alarm_fail_range"	: "20",//任务在3秒之后，失败累计清0
+		"alarm_adminlist"	: "yongze.chen;yongze.chen",
+		"alarm_notice_mode"	: "SMG;RTX;NOC",
+		"alarm_message"		: "告警提示内容"
+	},
+	"sync_test2":{
+		"cron_time"	: "*/2 * * * * *",
+		"timeout"	: "6",
+		"params"	: {}
+	}
+}
